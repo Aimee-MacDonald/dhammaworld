@@ -9,6 +9,4 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.listen(process.env.PORT, () => {
-  console.log("App started on port: " + process.env.PORT);
-});
+app.listen(process.env.PORT || 8080);
