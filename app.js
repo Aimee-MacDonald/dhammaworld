@@ -11,4 +11,8 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/dev", (req, res) => {
+  res.render("dev");
+});
+
 app.listen(process.env.PORT || 8080);
