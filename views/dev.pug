@@ -7,34 +7,19 @@ html(lang="en")
     link(rel="stylesheet", href="/styles/dev.css")
     title DEVELOPMENT
     body
-      div(id="sidebar")
-        div(class="sidebar-item")
-          div(class="sidebar-item-drawer")
-            label Email
-            input
-            label Password
-            input
-            div
-              button Login
-              button Register
-          div(class="sidebar-item-content")
-            img(src="/images/ph-img.svg")
-            p Login / Register
-
-        div(class="sidebar-item")
-          div(class="sidebar-item-content")
-            img(src="/images/ph-img.svg")
-            p Centres Worldwide
-
-      div(id="container")
-        h1 Centres Worldwide
-        p Centre1
-        p Centre2
-        p Centre3
-        p Centre4
-        p Centre5
-        p Centre6
-        p Centre7
-        p Centre8
-
+      div(id="menu")
+        button(onclick="toggleMenu()" id="menu-toggle") Wheel Out
+        button(onclick="menuLogin()") Login
+        button(onclick="menuCentres()") Centres
+        button(onclick="menuNewsfeed()") Newsfeed
+        button(onclick="menuAdmin()") Admin
+      div(id="main-container", class="container")
+        div(id="login-container", class="container closed")
+          h1 Login
+        div(id="centres-container", class="container open")
+          h1 Centres
+        div(id="newsfeed-container", class="container closed")
+          h1 Newsfeed
+        div(id="admin-container", class="container closed")
+          h1 Admin
       script(src="scripts/dev.js")
