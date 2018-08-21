@@ -10,6 +10,9 @@ body
 h1
   margin: 0
 
+p
+  margin: 0
+
 .container
   display: flex
   height: 100%
@@ -51,14 +54,13 @@ h1
 #main-container
   background: $light-blue
 
-#login-container
-
 #login-form
   background: $dark-blue
   padding: 2rem
   display: flex
   flex-flow: nowrap column
   border-radius: 0.5rem
+  box-shadow: 0 0 1rem 0.5rem $dark-blue
   label
     color: $light-blue
   input
@@ -66,6 +68,7 @@ h1
     margin-bottom: 2rem
     padding: 0.5rem
     font-weight: bold
+    border-radius: 0.3rem
   button
     background-color: $light-blue
     margin: 0.5rem
@@ -81,7 +84,7 @@ h1
   justify-content: center
 
 .centre-card
-  background: purple
+  background: $dark-blue
   margin: 1rem
   padding: 1rem
 
@@ -90,8 +93,9 @@ h1
   overflow-y: scroll
 
 .news-card
-  background: purple
+  background: $dark-blue
   width: 60%
-  margin: 1rem
+  padding: 2rem
+  margin-top: 1rem
 
 #admin-container
