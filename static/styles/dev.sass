@@ -10,6 +10,8 @@ h1
 .container
   display: flex
   height: 100%
+  align-items: center
+  justify-content: space-around
   .open
     width: 100%
     overflow: scroll
@@ -31,11 +33,24 @@ h1
 #login-container
   background: red
 
+#login-form
+  display: flex
+  flex-flow: nowrap column
+
 #centres-container
   background: orange
+  flex-flow: wrap row
+
+.centre-card
+  background: purple
 
 #newsfeed-container
   background: yellow
+  flex-flow: nowrap column
+
+.news-card
+  background: purple
+  width: 60%
 
 #admin-container
   background: green
