@@ -8,61 +8,62 @@ html(lang="en")
     title DEVELOPMENT
     body
       div(id="menu")
-        button(onclick="toggleMenu()" id="menu-toggle") Wheel Out
+        button(onclick="toggleMenu()" id="menu-toggle") Menu
         button(onclick="menuLogin()") Login
         button(onclick="menuCentres()") Centres
         button(onclick="menuNewsfeed()") Newsfeed
-        button(onclick="menuAdmin()") Admin
+        button(onclick="menuAdmin()" id="menu-admin") Admin
       div(id="main-container", class="container")
         div(id="login-container", class="container closed")
           div(id="login-form")
             label Email:
-            input
+            input(type="email", placeholder="example@email.com")
             label Password:
-            input
+            input(type="password", placeholder="password")
             button Login
             button Register
         div(id="centres-container", class="container open")
-          div(class="centre-card")
-            p name
-            img
-            p location
-            p next available course
-          div(class="centre-card")
-            p name
-            img
-            p location
-            p next available course
-          div(class="centre-card")
-            p name
-            img
-            p location
-            p next available course
-          div(class="centre-card")
-            p name
-            img
-            p location
-            p next available course
-          div(class="centre-card")
-            p name
-            img
-            p location
-            p next available course
-          div(class="centre-card")
-            p name
-            img
-            p location
-            p next available course
-          div(class="centre-card")
-            p name
-            img
-            p location
-            p next available course
-          div(class="centre-card")
-            p name
-            img
-            p location
-            p next available course
+          div(id="centres")
+            div(class="centre-card")
+              p name
+              img
+              p location
+              p next available course
+            div(class="centre-card")
+              p name
+              img
+              p location
+              p next available course
+            div(class="centre-card")
+              p name
+              img
+              p location
+              p next available course
+            div(class="centre-card")
+              p name
+              img
+              p location
+              p next available course
+            div(class="centre-card")
+              p name
+              img
+              p location
+              p next available course
+            div(class="centre-card")
+              p name
+              img
+              p location
+              p next available course
+            div(class="centre-card")
+              p name
+              img
+              p location
+              p next available course
+            div(class="centre-card")
+              p name
+              img
+              p location
+              p next available course
         div(id="newsfeed-container", class="container closed")
           div(class="news-card")
             p title

@@ -1,3 +1,6 @@
+$dark-blue: #000033
+$light-blue: #9999FF
+
 body
   margin: 0
   padding: 0
@@ -12,12 +15,11 @@ h1
   height: 100%
   align-items: center
   justify-content: space-around
+  overflow: hidden
   .open
     width: 100%
-    overflow: scroll
   .closed
     width: 0%
-    overflow: hidden
   transition: 0.5s
 
 #menu
@@ -25,32 +27,71 @@ h1
   flex-flow: nowrap column
   justify-content: space-around
   height: 100%
-  background: lime
+  background: $dark-blue
   position: fixed
+  box-shadow: 0 0 1rem 0.5rem $dark-blue
   button
-    padding: 0
+    margin: 0
+    padding: 1.5rem 4rem
+    background: 0
+    border: 0.1rem solid $light-blue
+    border-left: 0
+    border-right: 0
+    color: $light-blue
+    font-weight: bold
+    font-size: 1.2rem
+    &:hover
+      background: $light-blue
+      color: $dark-blue
+
+
+#menu-admin
+  display: none
+
+#main-container
+  background: $light-blue
 
 #login-container
-  background: red
 
 #login-form
+  background: $dark-blue
+  padding: 2rem
   display: flex
   flex-flow: nowrap column
+  border-radius: 0.5rem
+  label
+    color: $light-blue
+  input
+    margin-top: 0.5rem
+    margin-bottom: 2rem
+    padding: 0.5rem
+    font-weight: bold
+  button
+    background-color: $light-blue
+    margin: 0.5rem
+    border-radius: 0.1rem
+    padding: 0.5rem
+    font-weight: bold
 
-#centres-container
-  background: orange
+#centres
+  width: 60%
+  height: 100%
+  display: flex
   flex-flow: wrap row
+  justify-content: center
 
 .centre-card
   background: purple
+  margin: 1rem
+  padding: 1rem
 
 #newsfeed-container
-  background: yellow
   flex-flow: nowrap column
+  overflow-y: scroll
 
 .news-card
   background: purple
   width: 60%
+  margin: 1rem
 
 #admin-container
-  background: green
