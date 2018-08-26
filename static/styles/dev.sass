@@ -13,17 +13,21 @@ h1
 p
   margin: 0
 
+#background-canvas
+  position: absolute
+  z-index: -2
+
 .container
   display: flex
   height: 100%
   align-items: center
   justify-content: space-around
   overflow: hidden
+  transition: 0.5s
   .open
     width: 100%
   .closed
     width: 0%
-  transition: 0.5s
 
 #menu
   display: flex
@@ -52,7 +56,6 @@ p
   display: none
 
 #main-container
-  background: $light-blue
 
 #login-form
   background: $dark-blue

@@ -1,4 +1,5 @@
 var menuOpen = true;
+toggleMenu();
 
 var mainStates = ["login", "centres", "newsfeed", "admin"];
 var mainState = 1;
