@@ -21,8 +21,12 @@ html(lang="en")
             input(type="email", placeholder="example@email.com")
             label Password:
             input(type="password", placeholder="password")
-            button Login
-            button Register
+            div(id="confirm-password")
+              label(id="confirm-password-label") Confirm Password
+              input(id="confirm-password-input", type="password", placeholder="password")
+            div(id="login-buttons")
+              button(id="login-button", onclick="submitLogin()") Login
+              button(id="register-button", onclick="toggleLoginRegister()") Register
         div(id="centres-container", class="container open")
           div(id="centres")
             div(class="centre-card")

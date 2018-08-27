@@ -51,11 +51,8 @@ p
       background: $light-blue
       color: $dark-blue
 
-
 #menu-admin
   display: none
-
-#main-container
 
 #login-form
   background: $dark-blue
@@ -78,6 +75,15 @@ p
     border-radius: 0.1rem
     padding: 0.5rem
     font-weight: bold
+  #confirm-password
+    transition: 1s
+    display: flex
+    flex-flow: nowrap column
+    height: 0
+    overflow: hidden
+  #login-buttons
+    display: flex
+    flex-flow: nowrap column
 
 #centres
   width: 60%
@@ -89,7 +95,8 @@ p
 .centre-card
   background: $dark-blue
   margin: 1rem
-  padding: 1rem
+  padding: 2rem
+  border-radius: 1rem
 
 #newsfeed-container
   flex-flow: nowrap column
@@ -100,5 +107,6 @@ p
   width: 60%
   padding: 2rem
   margin-top: 1rem
+  border-radius: 1rem
 
 #admin-container
