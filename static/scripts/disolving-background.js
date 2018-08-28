@@ -80,3 +80,15 @@ window.addEventListener("mousemove", function(e){
   mouseX = e.clientX;
   mouseY = e.clientY;
 });
+
+window.addEventListener("resize", function(e){
+  screenWidth = canvas.width = window.innerWidth;
+  screenHeight = canvas.height = window.innerHeight;
+
+  numKalapas = (screenWidth * screenHeight) / 1024;
+  kalapas = [];
+
+  for(var i = 0; i < numKalapas; i++){
+    kalapas.push(new Kalapa());
+  }
+});
