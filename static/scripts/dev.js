@@ -126,6 +126,10 @@ function toggleLoginRegister(){
   });
 }
 
+window.addEventListener("click", function(e){
+  if(menuOpen && e.target.id != "menu-toggle") toggleMenu();
+});
+
 function submitLogin(){
   console.log("Submit Login");
 }
