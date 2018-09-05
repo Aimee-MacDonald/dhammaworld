@@ -135,5 +135,35 @@ function submitLogin(){
 }
 
 function submitRegister(){
-  console.log("Submit Register");
+  var em = document.getElementById("email-input").value;
+  var pw = document.getElementById("password-input").value;
+  var cpw = document.getElementById("confirm-password-input").value;
+
+  if(pw === cpw){
+    var request = new XMLHttpRequest();
+    request.onerror = function(err){console.log("Error: " + err)}
+    request.open("post", "/auth/register", true);
+    //request.setRequestHeader('CSRF-Token', document.querySelector('meta[name="csrf-token"]').getAttribute('content'));
+    request.setRequestHeader('Content-Type', "Application/json");
+    request.onload = function(){
+      if(request.readyState === 4){
+        switch(request.status){
+          case 200:
+            console.log("User Registered");
+            break;
+
+          case 422:
+            console.log("User already exists");
+            break;
+        }
+      }
+    }
+
+    request.send(JSON.stringify({
+      "email": em,
+      "password": pw
+    }));
+  } else {
+    console.log("Password and Password Confirmation do not Match");
+  }
 }
