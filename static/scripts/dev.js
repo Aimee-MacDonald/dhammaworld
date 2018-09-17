@@ -15,6 +15,23 @@ window.onload = function(){
   EL_mainContainer.append(SRC_newsfeedContainer);
 }
 
+window.onhashchange = function(hash){
+  document.getElementById("login-container").classList = "container closed";
+  document.getElementById("newsfeed-container").classList = "container closed";
+
+  var nurl = hash.newURL;
+  var hash = nurl.substring(nurl.indexOf('#'));
+  switch (hash) {
+    case "#login":
+      document.getElementById("login-container").classList = "container open";
+      break;
+
+    case "#news":
+    document.getElementById("newsfeed-container").classList = "container open";
+      break;
+  }
+}
+
 function createMenu(){
   var SRC_menu = document.createElement("script");
   SRC_menu.src = "scripts/components/menu.js";
