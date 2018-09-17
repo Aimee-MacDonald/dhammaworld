@@ -8,8 +8,8 @@ html(lang="en")
     title DEVELOPMENT
     body
       canvas(id="background-canvas")
-      div(id="main-container", class="container")
-        div(id="login-container", class="container closed")
+      //div(id="main-container", class="container")
+        //div(id="login-container", class="container closed")
           div(id="login-form")
             label Email:
             input(type="email", placeholder="example@email.com", id="email-input")
@@ -21,7 +21,7 @@ html(lang="en")
             div(id="login-buttons")
               button(id="login-button", onclick="submitLogin()") Login
               button(id="register-button", onclick="toggleLoginRegister()") Register
-        div(id="centres-container", class="container open")
+        //div(id="centres-container", class="container open")
           div(id="centres")
             div(class="centre-card")
               p name
@@ -63,7 +63,7 @@ html(lang="en")
               img
               p location
               p next available course
-        div(id="newsfeed-container", class="container closed")
+        //div(id="newsfeed-container", class="container closed")
           div(class="news-card")
             p title
             img

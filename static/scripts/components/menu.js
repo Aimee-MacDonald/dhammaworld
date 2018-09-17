@@ -1,3 +1,6 @@
+createMenu();
+toggleMenu();
+
 window.onhashchange = function(hash){
   document.getElementById("login-container").classList = "container closed";
   document.getElementById("centres-container").classList = "container closed";
@@ -78,6 +81,3 @@ function toggleMenu(){
     menuOpen = true;
   }
 }
-
-createMenu();
-toggleMenu();
