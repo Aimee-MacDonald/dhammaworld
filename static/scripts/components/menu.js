@@ -3,9 +3,8 @@ toggleMenu();
 
 window.onhashchange = function(hash){
   document.getElementById("login-container").classList = "container closed";
-  document.getElementById("centres-container").classList = "container closed";
+  //document.getElementById("centres-container").classList = "container closed";
   document.getElementById("newsfeed-container").classList = "container closed";
-  document.getElementById("admin-container").classList = "container closed";
 
   var nurl = hash.newURL;
   var hash = nurl.substring(nurl.indexOf('#'));

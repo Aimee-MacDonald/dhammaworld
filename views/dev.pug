@@ -8,19 +8,6 @@ html(lang="en")
     title DEVELOPMENT
     body
       canvas(id="background-canvas")
-      //div(id="main-container", class="container")
-        //div(id="login-container", class="container closed")
-          div(id="login-form")
-            label Email:
-            input(type="email", placeholder="example@email.com", id="email-input")
-            label Password:
-            input(type="password", placeholder="password", id="password-input")
-            div(id="confirm-password")
-              label(id="confirm-password-label") Confirm Password
-              input(id="confirm-password-input", type="password", placeholder="password")
-            div(id="login-buttons")
-              button(id="login-button", onclick="submitLogin()") Login
-              button(id="register-button", onclick="toggleLoginRegister()") Register
         //div(id="centres-container", class="container open")
           div(id="centres")
             div(class="centre-card")
@@ -88,8 +75,5 @@ html(lang="en")
             p date
             p author
             p description
-            
-        div(id="admin-container", class="container closed")
-          h1 Admin
       script(src="scripts/dev.js")
       script(src="scripts/disolving-background.js")
