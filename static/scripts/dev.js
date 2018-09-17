@@ -1,18 +1,6 @@
 window.onload = function(){
   createMenu();
-
-  var EL_mainContainer = document.createElement("div");
-  EL_mainContainer.id = "main-container";
-  EL_mainContainer.classList = "container";
-  document.body.append(EL_mainContainer);
-
-  var SRC_loginContainer = document.createElement("script");
-  SRC_loginContainer.src = "scripts/components/loginContainer.js";
-  EL_mainContainer.append(SRC_loginContainer);
-
-  var SRC_newsfeedContainer = document.createElement("script");
-  SRC_newsfeedContainer.src = "scripts/components/newsfeedContainer.js";
-  EL_mainContainer.append(SRC_newsfeedContainer);
+  createMainContainer();
 }
 
 window.onhashchange = function(hash){
@@ -27,7 +15,11 @@ window.onhashchange = function(hash){
       break;
 
     case "#news":
-    document.getElementById("newsfeed-container").classList = "container open";
+      document.getElementById("newsfeed-container").classList = "container open";
+      break;
+
+    case "#compose":
+      document.getElementById("compose-container").classList = "container open";
       break;
   }
 }
@@ -36,6 +28,25 @@ function createMenu(){
   var SRC_menu = document.createElement("script");
   SRC_menu.src = "scripts/components/menu.js";
   document.body.append(SRC_menu);
+}
+
+function createMainContainer(){
+  var EL_mainContainer = document.createElement("div");
+  EL_mainContainer.id = "main-container";
+  EL_mainContainer.classList = "container";
+  document.body.append(EL_mainContainer);
+
+  var SRC_loginContainer = document.createElement("script");
+  SRC_loginContainer.src = "scripts/components/loginContainer.js";
+  EL_mainContainer.append(SRC_loginContainer);
+
+  var SRC_newsfeedContainer = document.createElement("script");
+  SRC_newsfeedContainer.src = "scripts/components/newsfeedContainer.js";
+  EL_mainContainer.append(SRC_newsfeedContainer);
+
+  var SRC_composeNewsContainer = document.createElement("script");
+  SRC_composeNewsContainer.src = "scripts/components/composeNewsContainer.js";
+  EL_mainContainer.append(SRC_composeNewsContainer);
 }
 
 window.addEventListener("click", function(e){

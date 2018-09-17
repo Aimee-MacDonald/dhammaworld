@@ -3,8 +3,8 @@ createElements();
 var EL_menu;
 var EL_menuToggle;
 var EL_menuLogin;
-var EL_menuCentres;
 var EL_menuNewsfeed;
+var EL_menuComposeNews;
 
 function createElements(){
   EL_menu = document.createElement("div");
@@ -23,6 +23,10 @@ function createElements(){
   EL_menuNewsfeed.href = "#news";
   EL_menuNewsfeed.innerText = "Newsfeed";
 
+  EL_menuComposeNews = document.createElement("a");
+  EL_menuComposeNews.href = "#compose";
+  EL_menuComposeNews.innerText = "Compose";
+
   buildMenu();
 }
 
@@ -30,6 +34,7 @@ function buildMenu(){
   EL_menu.append(EL_menuToggle);
   EL_menu.append(EL_menuLogin);
   EL_menu.append(EL_menuNewsfeed);
+  EL_menu.append(EL_menuComposeNews);
 
   document.body.prepend(EL_menu);
 }
